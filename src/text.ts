@@ -57,6 +57,7 @@ export function handleTextNode(textNode: Text, context: TraversalContext): void 
 				selection.addRange(lineRange)
 				textSpan.textContent = selection
 					.toString()
+					.trim()
 					// SVG does not support tabs in text. Tabs get rendered as one space character. Convert the
 					// tabs to spaces according to tab-size instead.
 					// Ideally we would keep the tab and create offset tspans.
